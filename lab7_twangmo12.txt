@@ -1,0 +1,10 @@
+OPS445 Lab Report - System Information for running ./CheckLab7.py
+=================================================================
+    User login name: twangmo12
+    Linux system name: Tandin-Wangmo
+    Python executable: /usr/bin/python3
+    Python version: 31012
+    OS Platform: linux
+    Working Directory: /home/twangmo12/OPS445/lab7
+    Start at: Mon Nov  4 22:56:43 2024
+=================================================================

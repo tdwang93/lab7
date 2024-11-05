@@ -45,3 +45,31 @@ def valid_time(t):
     if t.minute >= 60 or t.second >= 60 or t.hour >= 24:
         return False
     return True
+
+def change_time(time, seconds):
+    """Modify the time object based on the integer value of seconds."""
+    time.second += seconds
+
+    # Adjust seconds and minutes
+    while time.second < 0:
+        time.second += 60
+        time.minute -= 1
+    while time.second >= 60:
+        time.second -= 60
+        time.minute += 1
+
+    # Adjust minutes and hours
+    while time.minute < 0:
+        time.minute += 60
+        time.hour -= 1
+    while time.minute >= 60:
+        time.minute -= 60
+        time.hour += 1
+
+    # Adjust hours to fit within a 24-hour format
+    if time.hour < 0:
+        time.hour = (time.hour + 24) % 24
+    elif time.hour >= 24:
+        time.hour = time.hour % 24
+
+    return None
